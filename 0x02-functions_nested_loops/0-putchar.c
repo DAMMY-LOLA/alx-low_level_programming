@@ -5,14 +5,6 @@
  * Return: Always 0 (Success)
  */
 int main() {
-    putchar('_');
-    putchar('p');
-    putchar('u');
-    putchar('t');
-    putchar('c');
-    putchar('h');
-    putchar('a');
-    putchar('r');
-    putchar('\n');
+    printf("%c%c%c%c%c%c%c%c\n", 95, 112, 117, 116, 99, 104, 97, 114);
     return 0;
 }
