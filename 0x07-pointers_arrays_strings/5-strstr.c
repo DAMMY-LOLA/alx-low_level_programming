@@ -1,18 +1,32 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * _strstr - a function that locates a substring.
+ * @haystack: string
+ * @needle: substring
  *
- * Return: Always 0.
+ * Return: a pointer to the beginning of the located substring.
  */
-int main(void)
+char *_strstr(char *haystack, char *needle)
 {
-	char *s = "wworld of this";
-	char *f = "world";
-	char *t;
+	char *p1;
+	char *p2;
 
-	t = _strstr(s, f);
-	printf("%s\n", t);
+	while (*haystack != '\0')
+	{
+		p1 = haystack;
+		p2 = needle;
+
+		while (*haystack != '\0' &&  *p2 != '\0' && *haystack == *p2)
+		{
+			haystack++;
+			p2++;
+		}
+
+		if (!*p2)
+			return (p1);
+
+		haystack = p1 + 1;
+	}
 	return (0);
 }
